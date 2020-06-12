@@ -1,0 +1,1 @@
+{"rsync":{"/vagrant":{"type":"rsync","guestpath":"/vagrant","hostpath":"F:/Vagrant/vagrant-k8s","disabled":false,"mount_options":["dmode=777","fmode=666"],"__vagrantfile":true,"owner":"vagrant","group":"vagrant"}}}

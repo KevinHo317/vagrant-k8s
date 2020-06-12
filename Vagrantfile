@@ -14,7 +14,8 @@ vconfig = YAML::load_file("#{config_nodes}")
 BRIDGE_NET = vconfig['vagrant_ip']
 DOMAIN = vconfig['vagrant_domain_name']
 RAM = vconfig['vagrant_memory']
-SCRIPT = vconfig['vagrant_script_path']
+RUNBOOTSTRAP = vconfig['vagrant_runbootstrap']
+BOOTSTRAP = vconfig['vagrant_bootstrap_path']
 
 servers=[
   {
@@ -57,8 +58,12 @@ Vagrant.configure(2) do |config|
 			        	vb.cpus = vconfig['vagrant_cpu']
 				        vb.memory = machine[:ram]
                 vb.name = machine[:hostname]
+            node.vm.provision :shell, path: "artefacts/script/rootpw.sh"
+            #node.vm.provision :shell, path: "artefacts/script/ssh.sh"
+            if (!"#{RUNBOOTSTRAP}")
+            node.vm.provision :shell, path: "#{BOOTSTRAP}"
             end
-        config.vm.provision :shell, path: "#{SCRIPT}"
+            end
         end
     end
 end

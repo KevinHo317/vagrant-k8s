@@ -7,4 +7,5 @@ vagrant_directory: /vagrant
 vagrant_cpu: 2
 vagrant_box_check_update: false
 vagrant_domain_name: test.com
-vagrant_script_path: artefacts/script/bootstrap.sh
+vagrant_bootstrap_path: artefacts/script/bootstrap.sh
+vagrant_runbootstrap: false

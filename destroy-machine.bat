@@ -1,1 +1,1 @@
-vagrant destroy
+vagrant destroy -f
