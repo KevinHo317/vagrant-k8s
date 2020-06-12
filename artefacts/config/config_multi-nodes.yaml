@@ -1,0 +1,9 @@
+vagrant_box: centos/7
+vagrant_box_version: "2004.01"
+vagrant_ip: 192.168.99.
+vagrant_hostname: vagrant
+vagrant_memory: 4096
+vagrant_directory: /vagrant
+vagrant_cpu: 2
+vagrant_box_check_update: false
+vagrant_domain_name: test.com
