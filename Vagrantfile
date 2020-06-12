@@ -14,6 +14,7 @@ vconfig = YAML::load_file("#{config_nodes}")
 BRIDGE_NET = vconfig['vagrant_ip']
 DOMAIN = vconfig['vagrant_domain_name']
 RAM = vconfig['vagrant_memory']
+SCRIPT = vconfig['vagrant_script_path']
 
 servers=[
   {
@@ -57,6 +58,7 @@ Vagrant.configure(2) do |config|
 				        vb.memory = machine[:ram]
                 vb.name = machine[:hostname]
             end
+        config.vm.provision :shell, path: "#{SCRIPT}"
         end
     end
 end
