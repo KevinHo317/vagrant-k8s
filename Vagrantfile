@@ -57,6 +57,7 @@ Vagrant.configure(2) do |config|
 				        vb.memory = machine[:ram]
                 vb.name = machine[:hostname]
             end
+	config.vm.provision :shell, path: "#{dir}/artefacts/config/bootstrap.sh"
         end
     end
 end
