@@ -5,12 +5,16 @@ OS : Centos
 
 server name :
 master01
-IP address : 192.168.99.101
+IP address : 192.168.99.110
 
 master02
-IP address : 192.168.99.102
+IP address : 192.168.99.111
+
 node01
-IP address : 192.168.99.101
+IP address : 192.168.99.112
+
 node02
-IP address : 192.168.99.101
+IP address : 192.168.99.113
+
 node03
+IP address : 192.168.99.114
