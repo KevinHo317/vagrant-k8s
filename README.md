@@ -1,9 +1,8 @@
 Kubernetes Lab (form zero build up)
 
-Box image : Centos/7
+Vagrant Box image : Centos/7
 
-Stucture:
-2 master 3 node
+Stucture: 2 master 3 node
 
 server name :
 
