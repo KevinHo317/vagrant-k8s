@@ -58,11 +58,11 @@ Vagrant.configure(2) do |config|
 			        	vb.cpus = vconfig['vagrant_cpu']
 				        vb.memory = machine[:ram]
                 vb.name = machine[:hostname]
-            node.vm.provision :shell, path: "artefacts/script/rootpw.sh"
-            node.vm.provision :shell, path: "artefacts/script/ssh.sh"
-            if (!"#{RUNBOOTSTRAP}")
-            node.vm.provision :shell, path: "#{BOOTSTRAP}"
-            end
+            #node.vm.provision :shell, path: "artefacts/script/rootpw.sh"
+            #node.vm.provision :shell, path: "artefacts/script/ssh.sh"
+            #if (!"#{RUNBOOTSTRAP}")
+            #node.vm.provision :shell, path: "#{BOOTSTRAP}"
+            #end
             end
         end
     end
