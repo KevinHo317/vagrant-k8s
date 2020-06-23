@@ -62,7 +62,7 @@ Vagrant.configure(2) do |config|
             #node.vm.provision :shell, path: "artefacts/script/ssh.sh"
             #if (!"#{RUNBOOTSTRAP}")
             #node.vm.provision :shell, path: "#{BOOTSTRAP}"
-            #end
+            ##end
             end
         end
     end
